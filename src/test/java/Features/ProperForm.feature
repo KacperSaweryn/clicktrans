@@ -6,7 +6,7 @@ Feature: ProperForm
     When User fill Pełna nazwa firmy
     And User fill Email
     And User fill Imię i nazwysko
-    And User fill Polish phone number
+    And User fill phone number
     And User fill 8 digit long password
     And User click on Zapoznałem się z regulaminem checkbox
     And User click on second checkbox
