@@ -107,15 +107,16 @@ public class ProperForm {
     }
 
     @Then("^User is registered$")
-    public void user_is_registered() throws IOException {
-        URL url = new URL("https://dev-1.clicktrans.pl/register-test/courier");
-        HttpURLConnection connection = (HttpURLConnection)url.openConnection();
-        connection.setRequestMethod("POST");
-        connection.connect();
-        int code = connection.getResponseCode();
-        System.out.println(code);
-
-
+    public void user_is_registered() throws IOException, InterruptedException {
+        /** check HTTP response
+         URL url = new URL("https://dev-1.clicktrans.pl/register-test/courier");
+         HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+         connection.setRequestMethod("POST");
+         connection.connect();
+         int code = connection.getResponseCode();
+         System.out.println(code);
+         **/
+        driver.findElement(By.xpath("/html/body/div[6]/div"));
     }
-    }
+}
 
